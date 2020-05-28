@@ -1,4 +1,27 @@
-## 주요 함수 prototype 및 설명 
+## 1. 예제 설명
+
+​	모든 코드마다 Makefile이 있고 `make` 를 치시면 컴파일 및 실행이 됩니다. 
+​	(`gcc -Lmlx -lmlx -framework OpenGL -framework AppKit` <- 컴파일 옵션) 
+
+
+
+#### 	01first_example: mlx로 창띄우는 간단예제
+
+#### 	02key_handling: 키를 입력받고 동작을 수행합니다. 
+
+​		W, A: 미리 입력된 메세지 출력
+
+​		ESC: 프로그램 종료
+
+#### 	03img_loading: xpm파일을 불러와서 화면에 그려 창에 띄웁니다.
+
+#### 	04img_making: 파일이 아닌 직접 픽셀에 점을 찍어서 그림을 그려 창에 띄웁니다.
+
+#### 	05img_loading_and_modifying: 파일을 불러온 뒤 그 위에 픽셀르 찍어서 창에 띄웁니다.
+
+
+
+## 2. 주요 함수 prototype 및 설명 
 
 mlx_beta/man/man3폴더 들어가셔서 강조된 제목으로 명령어 치시면 메뉴얼 페이지 볼 수 있습니다.
 
@@ -6,17 +29,23 @@ mlx_beta/man/man3폴더 들어가셔서 강조된 제목으로 명령어 치시�
 
 ##### man ./mlx.3
 
+---
+
 - `void	*mlx_init ();` 
 
 
 
 ##### man ./mlx_new_window.3
 
+---
+
 - `void	*mlx_new_window ( void *mlx_ptr, int size_x, int size_y, char *title );`
 
 
 
 ##### man ./mlx_loop.3
+
+---
 
 -    `int	mlx_loop ( void *mlx_ptr );`
 
@@ -41,6 +70,8 @@ mlx_beta/man/man3폴더 들어가셔서 강조된 제목으로 명령어 치시�
 
 ##### man ./mlx_new_image.3
 
+---
+
 ​	여기는 제 예제를 한번 보시는 것을 추천드립니다.
 
 - `void	*mlx_new_image ( void *mlx_ptr, int width, int height );`
@@ -49,7 +80,9 @@ mlx_beta/man/man3폴더 들어가셔서 강조된 제목으로 명령어 치시�
 - `void*	mlx_xpm_file_to_image (  void  *mlx_ptr,  char  *filename,  int  *width,  int *height );`
       
 
-## 팁
+
+
+## 3. 과제 하기 전에 알았더라면...
 
 1. 서브젝트 받을 때 mlx와 mlx_beta 두 압축파일을 주는데 beta가 개선버전인듯 한데 저는 mlx로만 사용했습니다.
 
@@ -66,7 +99,11 @@ mlx_beta/man/man3폴더 들어가셔서 강조된 제목으로 명령어 치시�
 
 
 
-## 참고 사이트
+
+
+
+
+## 4. 참고 사이트
 
 
 
