@@ -4,8 +4,10 @@
 
 #define X_EVENT_KEY_PRESS		2
 #define X_EVENT_KEY_release		3
-#define X_EVENT_KEY_EXIT		17
+#define X_EVENT_KEY_EXIT		17 //창 닫기 버튼 
 
+//키 정보들
+//아래 이외의 키들을 README파일에 언급된 사이트에 전부 모아져 있습니다.
 #define KEY_ESC			53
 # define KEY_Q			12
 # define KEY_W			13

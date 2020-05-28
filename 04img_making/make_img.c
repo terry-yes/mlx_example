@@ -11,7 +11,8 @@ typedef struct	s_img
 {
 	void		*img_ptr;
 	int			*data;
-
+	//아래 3개 값은 이해 안해도 사용하는데 지장이 없음. 
+	//선언한뒤 함수의 인자로만 잘 넣어주면 알아서 정보를 받아나옴.
 	int			size_l;
 	int			bpp;
 	int			endian;
