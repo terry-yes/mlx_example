@@ -176,11 +176,11 @@ mlx_beta/man/man3폴더 들어가셔서 강조된 제목으로 명령어 치시�
    - [Key handle 관련](https://stackoverflow.com/c/42network/questions/164)
 
    - [key handle 관련 깃헙(위키)](https://github.com/VBrazhnik/FdF/wiki/How-to-handle-mouse-buttons-and-key-presses%3F)
-2. 7번에서 필요한 key 코드자료
-- [키코드 (이미지)](https://raw.githubusercontent.com/VBrazhnik/FdF/master/images/key_codes.png)
-  
-- [키코드(코드)](https://gist.github.com/jfortin42/68a1fcbf7738a1819eb4b2eef298f4f8)
-  
+2. 키보드의 코드번호를 정리해놓은 자료
+   - [키코드 (이미지)](https://raw.githubusercontent.com/VBrazhnik/FdF/master/images/key_codes.png)
+    
+   - [키코드(코드)](https://gist.github.com/jfortin42/68a1fcbf7738a1819eb4b2eef298f4f8)
+
 
 
 
