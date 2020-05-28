@@ -1,3 +1,17 @@
+## 0. 들어가기에 앞서
+
+ 1. cub3D 서브젝트 페이지에 첨부된 압축파일 minilibx_opengl.tgz과 minilibx_mms_20200219_beta.tgz 
+    2개가 있는데 전자를 **mlx**, 후자를 **mlx_beta**로 지칭하겠습니다.
+
+ 2. 제가 보려고 써놓은 서브젝트 번역본인데 부족하지만 필요하시면 사용하시기 바랍니다.
+
+    저만 보려고 대충 써놓아서 허접할 수 있습니다.
+    [서브젝트 번역본](subject_translated.md) 
+
+
+
+
+
 ## 1. 예제 설명
 
 ​	모든 코드마다 Makefile이 있고 `make` 를 치시면 컴파일 및 실행이 됩니다. 
@@ -54,7 +68,8 @@ mlx_beta/man/man3폴더 들어가셔서 강조된 제목으로 명령어 치시�
 
 - `int	mlx_key_hook ( void *win_ptr, int (*funct_ptr)(), void *param );`
 
-  키보드 입력받는 함수(하지만 안씀)
+  키보드 입력받는 함수(하지만 안씀). 
+  이유는 밑에 mlx_hook()가 더 좋기 때문에
 
 - `int	mlx_loop_hook ( void *mlx_ptr, int (*funct_ptr)(), void *param );`
 
@@ -63,7 +78,7 @@ mlx_beta/man/man3폴더 들어가셔서 강조된 제목으로 명령어 치시�
 
 - `int mlx_hook(void *win_ptr, int x_event, int x_mask, int (*funct)(), void *param);`
 
-  특이한게 man에 없음.
+  꼭 필요한 함수고 강력한 함수인데 특이하게 man에 없음.
   모든 입력을 처리하는 함수 x_event값에 따라 key_press, key_release, mouse클릭, 창닫기버튼 등 입력을 받을 수 있음
 
 
@@ -72,7 +87,7 @@ mlx_beta/man/man3폴더 들어가셔서 강조된 제목으로 명령어 치시�
 
 ---
 
-​	여기는 제 예제를 한번 보시는 것을 추천드립니다.
+​	여기는 제 이미지 예제를 한번 보시는 것을 추천드립니다.
 
 - `void	*mlx_new_image ( void *mlx_ptr, int width, int height );`
 - `char	*mlx_get_data_addr  (  void *img_ptr, int *bits_per_pixel, int *size_line, int *endian );`
@@ -82,32 +97,16 @@ mlx_beta/man/man3폴더 들어가셔서 강조된 제목으로 명령어 치시�
 
 
 
-## 3. 과제 하기 전에 알았더라면...
-
-1. 서브젝트 받을 때 mlx와 mlx_beta 두 압축파일을 주는데 beta가 개선버전인듯 한데 저는 mlx로만 사용했습니다.
-
-   다만 mlx에는 man페이지가 없어서 mlx_beta의 man페이지를 참고했습니다.
-
-   mlx는 이미지파일이 xpm확장자를 사용해야하는데 mlx_beta는 png도 가능한듯합니다.
 
 
-2. mlx_pixel_put과 mlx_put_image_to_window는 거의 같은 기능을 합니다만
-   mlx_put_image_to_window는 이미지 정보를 모았다가 한번에 그리고, mlx_pixel_put은 매번 점을 그려서 속도가 느린것 같습니다.
-
-   따라서 mlx_put_image_to_window는 화면의 모든 pixel정보를 모았다가 한번에 그리는게 좋습니다.
-   (이 이유때문인지 확실친 않지만, 두번만 써도 속도가 느려지는것을 느꼈습니다)
+## 3. 참고 사이트
 
 
 
-
-
-
-
-## 4. 참고 사이트
-
-
-
-- 요약: 제가 만든 예제나 1,2번으로 감을 잡고 3,4번을 통해 raycasting을 이해하면서 5번 코드를 참고해서 작성하기
+- 코스
+  - Hard: 제가 만든 예제나 1,2번으로 감을 잡고 3,4번을 통해 raycasting을 이해하면서 5번 코드를 참고해서 작성하기
+  - Normal: 3번 사이트로 raycasting 개념을 이해 한뒤 제가 만든 예제로 mlx를 파악하고  5번 깃헙을 참고해서 제출하기
+  - Easy: 제가 만든 예제로 mlx파악 후 5번 코드 참고해서 제출하기
 
 
 
@@ -145,15 +144,51 @@ mlx_beta/man/man3폴더 들어가셔서 강조된 제목으로 명령어 치시�
    다만 이미지를 만드는법은 있지만
    로딩하는 법이 없었음
 
-7. key , mouse handling관련(둘이 같은 내용)
+
+
+#### 기타 참고 사이트
+
+---
+
+1. key , mouse handling관련(둘이 같은 내용)
 
    - [Key handle 관련](https://stackoverflow.com/c/42network/questions/164)
 
    - [key handle 관련 깃헙(위키)](https://github.com/VBrazhnik/FdF/wiki/How-to-handle-mouse-buttons-and-key-presses%3F)
-
-8. 7번에서 필요한 key 코드자료
+2. 7번에서 필요한 key 코드자료
 - [키코드 (이미지)](https://raw.githubusercontent.com/VBrazhnik/FdF/master/images/key_codes.png)
   
 - [키코드(코드)](https://gist.github.com/jfortin42/68a1fcbf7738a1819eb4b2eef298f4f8)
   
 
+
+
+
+
+## 4. 약간의 팁
+
+1. 서브젝트 받을 때 mlx와 mlx_beta 두 압축파일을 주는데 beta가 개선버전인듯 한데 저는 mlx로만 사용했습니다.
+
+   다만 mlx에는 man페이지가 없어서 mlx_beta의 man페이지를 참고했습니다.
+
+   mlx는 이미지파일이 xpm확장자를 사용해야하는데 mlx_beta는 png도 가능한듯합니다.
+   
+
+
+
+2. mlx_pixel_put과 mlx_put_image_to_window는 거의 같은 기능을 합니다만
+   mlx_put_image_to_window는 이미지 정보를 모았다가 한번에 그리고, mlx_pixel_put은 매번 점을 그려서 속도가 느린것 같습니다.
+
+   따라서 mlx_put_image_to_window는 화면의 모든 pixel정보를 모았다가 한번에 그리는게 좋습니다.
+   (이 이유때문인지 확실친 않지만, 두번만 써도 속도가 느려지는것을 느꼈습니다)
+
+
+
+3. 도트에 선을 그릴 때 DDA Algorithm을 알아야 합니다. 
+   위에 1번사이트에서 다른 알고리즘도 소개되긴 하는데 위의 4,5번 사이트에서 raycasting을 이해할 때 꼭 필요합니다.
+   3번 사이트에서는 필요하지 않았던 것 같습니다.
+
+
+
+4. 아래 사이트에서 각종 이미지 파일을 xpm으로 변환 할 수 있습니다.
+   https://convertio.co/kr/png-xpm/
