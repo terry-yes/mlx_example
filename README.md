@@ -192,3 +192,7 @@ mlx_beta/man/man3폴더 들어가셔서 강조된 제목으로 명령어 치시�
 
 4. 아래 사이트에서 각종 이미지 파일을 xpm으로 변환 할 수 있습니다.
    https://convertio.co/kr/png-xpm/
+
+
+
+5. 위의 glagan github의 코드중 macro함수는 현재 norm 에러가 떠서 해결해 주어야합니다. (파라미터를 사용하는 매크로 함수 금지)
