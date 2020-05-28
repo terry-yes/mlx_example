@@ -36,7 +36,7 @@
 - ##### 	04img_making: 파일이 아닌 직접 픽셀에 점을 찍어서 그림을 그려 창에 띄웁니다.
 
 
-- ##### 	05img_loading_and_modifying: 파일을 불러온 뒤 그 위에 픽셀르 찍어서 창에 띄웁니다.
+- ##### 	05img_loading_and_modifying: 파일을 불러온 뒤 그 위에 픽셀을 찍어서 창에 띄웁니다.
 
 
 
@@ -121,37 +121,49 @@ mlx_beta/man/man3폴더 들어가셔서 강조된 제목으로 명령어 치시�
 
 1. [mlx관련 자료 모음집, 튜토리얼ft_libgfx](https://github.com/qst0/ft_libgfx)
 
-   mlx에 대한 정보가 전체적으로 담겨있지만 처음 보기 쉽지않음
+   mlx에 대한 정보가 전체적으로 담겨있지만 처음 보기 쉽지않습니다.
+
+   한번에 다 파악하지 말고 필요한 만큼씩 파악하시는 걸 추천드립니다.
 
 2. [Intra MinilibX강의](https://elearning.intra.42.fr/notions/minilibx/subnotions)
 
-   처음에 mlx를 어떻게 다뤄야 하는지 시작만 알려줌
-   사실 요약하면 코드 20~30줄 정도밖에 안되고 그 코드가 1번과 제 예제에 적혀있어서 안봐도 무방
+   처음에 mlx를 어떻게 다뤄야 하는지 시작만 알려줍니다.(아주 기본)
+
+   사실 요약하면 코드 20~30줄 정도밖에 안되고 그 코드가 1번사이트나 제 예제에 적혀있어서 안봐도 무방합니다.
 
 3. [Raycasting Basics with JavaScript](https://courses.pikuma.com/courses/take/raycasting/lessons/7503313-player-movement)
 
-   수학적인 개념을 모르고 raycasting을 이해할수 있게 설명해줌.
-   sin, cos이 쓰이는데 그것도 설명해줌.
-   다만 자바스크립트에서 쓰는 그래픽 함수가 mlx와 달라서 직접 구현해야함.
-   그리고 texture를 다루는 방법은 안쓰여있고 밑에 4번과 방식이 달라서 어쩔수 없이 4번을 봐야함
+   수학적인 개념을 모르고 raycasting을 이해할수 있게 설명해줍니다.
+
+   sin, cos이 쓰이는데 개념부터 차근차근히 설명해줍니다.
+
+   다만 자바스크립트에서 쓰는 그래픽 함수가 mlx와 달라서 직접 구현해야합니다.(직선, 사각형, 원 그리기 등)
+
+   그리고 texture를 다루는 방법은 안쓰여있고 밑에 4,5번 사이트와 방식이 달라서 어쩔수 없이 4번 사이트의 설명을 봐야합니다.
 
 4. [Raycasting explained(Lode's Computer Graphics Tutorial)](https://lodev.org/cgtutor/raycasting.html)
 
-   cub3d를 이해하려면 4번을 거의 전부 이해해야함.
-   외면하고 싶은 순간이 한둘이 아니었지만 제가 참고한 코드가 이 강의를 기반으로 하고 있어서
-   어쩔수 없이 여기로 계속 되돌아왔음
+   cub3d를 이해하려면 4번을 거의 전부 이해해야합니다. 
+
+   외면하고 싶은 순간이 한두번이 아니었지만 제가 참고한 코드가 이 강의를 기반으로 하고 있어서
+
+   막힐때마다 이 사이트를 붙잡고 있었습니다.
 
 5. [제가 참고한 cub3d github(42-cub3d-glagan)](https://github.com/Glagan/42-cub3d)
 
-   제가 참고한 코드. (github에서 cub3d로 검색했을 때 star제일 많음)
-   코드가 상당히 깔끔하게 짜여져있고 4번의 설명을 기반으로 하고 있어서 4번을 이해하면서 보기 좋음.
-   다만 수정해야할 부분들이 존재함.(macro사용부분, --save옵션, 정사각형이 아닌 맵 등)
+   제가 참고한 깃헙 코드입니다. (github에서 cub3d로 검색했을 때 star제일 많음)
+
+   코드가 상당히 깔끔하게 짜여져있고 4번의 설명을 기반으로 하고 있어서 4번을 이해하면서 보기 좋습니다.
+
+   다만 수정해야할 부분들이 몇군데 존재합니다.(macro 함수 사용부분, --save옵션, 정사각형이 아닌 맵 등)
 
 6. [mlx 이미지 관련 튜토리얼(images_example-keuhdall)](https://github.com/keuhdall/images_example)
 
-   이미지를 다루기전에 한번 해보면 좋은 코드
-   다만 이미지를 만드는법은 있지만
-   로딩하는 법이 없었음
+   이미지를 다루기전에 한번 해보면 좋은 깃헙입니다.
+   
+   설명이 잘 되어 있습니다.
+   
+   다만 이미지를 만드는법은 있지만 로딩하는 법이 없었던 것으로 기억합니다.
 
 
 
