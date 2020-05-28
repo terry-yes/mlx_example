@@ -15,6 +15,7 @@
 ## 1. 예제 설명
 
 ​	모든 코드마다 Makefile이 있고 `make` 를 치시면 컴파일 및 실행이 됩니다. 
+
 ​	(`gcc -Lmlx -lmlx -framework OpenGL -framework AppKit` <- 컴파일 옵션) 
 
 
@@ -24,12 +25,13 @@
 
 - ##### 	02key_handling: 키를 입력받고 동작을 수행합니다. 
 
+		```
 		W, A: 미리 입력된 메세지 출력
-		
 		ESC: 프로그램 종료
-		
-		
-		
+	```
+	
+	
+	
 - ##### 	03img_loading: xpm파일을 불러와서 화면에 그려 창에 띄웁니다.
 
 
@@ -69,25 +71,26 @@ mlx_beta/man/man3폴더 들어가셔서 강조된 제목으로 명령어 치시�
 
 ---
 
--    `int	mlx_loop ( void *mlx_ptr );`
+- `int	mlx_loop ( void *mlx_ptr );`
 
 
-   ​	마지막에 이걸 쳐줘야 프로그램이 종료하지 않고 계속 돌아감
+    마지막에 이걸 쳐줘야 프로그램이 종료하지 않고 계속 돌아갑니다.
 
 - `int	mlx_key_hook ( void *win_ptr, int (*funct_ptr)(), void *param );`
 
-  키보드 입력받는 함수(하지만 안씀). 
+  키보드의 키들을 입력받는 함수이지만 안씁니다.
+
   이유는 밑에 mlx_hook()가 더 좋기 때문에
 
 - `int	mlx_loop_hook ( void *mlx_ptr, int (*funct_ptr)(), void *param );`
 
   아무 입력이 없을때 계속 loop를 돌리는 함수.
-  이 함수를 사용해서 현재 위치 정보를 기반으로 화면을 매번 새로 그려야함.
+  이 함수를 이용해 현재 위치 정보를 기반으로 화면을 매번 새로 그리면 됩니다.
 
 - `int mlx_hook(void *win_ptr, int x_event, int x_mask, int (*funct)(), void *param);`
 
-  꼭 필요한 함수고 강력한 함수인데 특이하게 man에 없음.
-  모든 입력을 처리하는 함수 x_event값에 따라 key_press, key_release, mouse클릭, 창닫기버튼 등 입력을 받을 수 있음
+  꼭 필요한 함수고 강력한 함수인데 특이하게 man에 없습니다.
+  모든 입력을 처리하는 함수 x_event값에 따라 key_press, key_release, mouse클릭, **창닫기버튼** 등 입력을 받을 수 있음
 
 
 
@@ -112,7 +115,7 @@ mlx_beta/man/man3폴더 들어가셔서 강조된 제목으로 명령어 치시�
 
 
 - 코스
-  - Hard: 제가 만든 예제나 1,2번으로 감을 잡고 3,4번을 통해 raycasting을 이해하면서 5번 코드를 참고해서 작성하기
+  - Hard: 제가 만든 예제나 1,2번으로 mlx 감을 잡고 3,4번을 통해 raycasting을 이해하면서 5번 코드를 참고해서 작성하기
   - Normal: 3번 사이트로 raycasting 개념을 이해 한뒤 제가 만든 예제로 mlx를 파악하고  5번 깃헙을 참고해서 제출하기. (참고라고 쓰고 필사라고 읽는다.)
   - Easy: 제가 만든 예제로 mlx파악 후 5번 코드 참고해서 제출하기. (참고라고 쓰고 필사라고 읽는다.)
 
