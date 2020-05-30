@@ -34,10 +34,9 @@ int	main(void)
 	mlx->mlx_ptr = mlx_init();
 	mlx->win = mlx_new_window(mlx->mlx_ptr, WIN_WIDTH, WIN_HEIGHT, "A simple example");
 	img.img_ptr = mlx_new_image(mlx->mlx_ptr, IMG_WIDTH, IMG_HEIGHT);
-	img.data = (int *)mlx_get_data_addr(img.img_ptr, &img.bpp, &img.size_l,
+	img.data = (int *)mlx_get_data_addr(img.img_ptr, &img.bpp, &img.size_l, &img.endian);
 	//여기서 (int *)를 안해주고 img.data가 void *이면 밑에 배열값들을 참조할 때 다 4를 곱해야한다.
 	//그렇기 때문에 int *로 캐스팅해주는편이 좋다고 한다.
-		&img.endian);
 	count_h = -1;
 	while (++count_h < IMG_HEIGHT)
 	{

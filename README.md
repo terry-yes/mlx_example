@@ -1,3 +1,10 @@
+#### 수정사항
+
+- Lodev raycasting 번역 블로그 추가 - 20.05.30
+- 06map_2d 예제 추가 - 20.05.30
+
+
+
 ## 0. 들어가기에 앞서
 
  1. cub3D 서브젝트 페이지에 첨부된 압축파일 minilibx_opengl.tgz과 minilibx_mms_20200219_beta.tgz 
@@ -8,7 +15,7 @@
     저만 보려고 대충 써놓아서 허접할 수 있습니다.
     [서브젝트 번역본](subject_translated.md) 
 
-
+<br>
 
 
 
@@ -38,7 +45,12 @@
 
 - ##### 	05img_loading_and_modifying: 파일을 불러온 뒤 그 위에 픽셀을 찍어서 창에 띄웁니다.
 
+05번까지는 mlx의 기본 기능을 대부분 살펴보았고 이후는 응용예제입니다. 
 
+
+- #####      06map_2d: 간단한 2d맵을 만듭니다. (esc키, 창닫기버튼으로 종료가능, 그 이외의 interaction 없음)
+
+<br>
 
 
 ## 2. 주요 함수 prototype 및 설명 
@@ -104,7 +116,7 @@ mlx_beta/man/man3폴더 들어가셔서 강조된 제목으로 명령어 치시�
 - `void*	mlx_xpm_file_to_image (  void  *mlx_ptr,  char  *filename,  int  *width,  int *height );`
       
 
-
+<br>
 
 
 
@@ -143,6 +155,8 @@ mlx_beta/man/man3폴더 들어가셔서 강조된 제목으로 명령어 치시�
 
 4. [Raycasting explained(Lode's Computer Graphics Tutorial)](https://lodev.org/cgtutor/raycasting.html)
 
+   - [위 사이트를 번역한 블로그](https://blog.naver.com/aoikazto/221433793310) -- 42 sebaek님 제보
+
    cub3d를 이해하려면 4번을 거의 전부 이해해야합니다. 
 
    외면하고 싶은 순간이 한두번이 아니었지만 제가 참고한 코드가 이 강의를 기반으로 하고 있어서
@@ -173,17 +187,17 @@ mlx_beta/man/man3폴더 들어가셔서 강조된 제목으로 명령어 치시�
 
 1. key , mouse handling관련(둘이 같은 내용)
 
-   - [Key handle 관련](https://stackoverflow.com/c/42network/questions/164)
+   - [stack overflow 42 커뮤니티-여러 인풋(키보드, 마우스 등) 관련 ](https://stackoverflow.com/c/42network/questions/164) : 42아이디로 계정연동 필요
 
-   - [key handle 관련 깃헙(위키)](https://github.com/VBrazhnik/FdF/wiki/How-to-handle-mouse-buttons-and-key-presses%3F)
+   - [key handle 관련 깃헙](https://github.com/VBrazhnik/FdF/wiki/How-to-handle-mouse-buttons-and-key-presses%3F) - 윗글의 출처가 여기인듯?
 2. 키보드의 코드번호를 정리해놓은 자료
    - [키코드 (이미지)](https://raw.githubusercontent.com/VBrazhnik/FdF/master/images/key_codes.png)
-    
+   
    - [키코드(코드)](https://gist.github.com/jfortin42/68a1fcbf7738a1819eb4b2eef298f4f8)
 
 
 
-
+<br>
 
 
 ## 4. 약간의 팁
