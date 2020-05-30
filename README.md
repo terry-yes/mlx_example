@@ -1,3 +1,9 @@
+#### 수정사항
+
+- Lodev raycasting 번역 블로그 추가 - 20.05.30
+
+
+
 ## 0. 들어가기에 앞서
 
  1. cub3D 서브젝트 페이지에 첨부된 압축파일 minilibx_opengl.tgz과 minilibx_mms_20200219_beta.tgz 
