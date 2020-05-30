@@ -241,8 +241,8 @@ mlx_beta/man/man3폴더 들어가셔서 강조된 제목으로 명령어 치시�
 10001<br>
 11111<br> 아래 이미지처럼 보이는 오류가 발생할 수 있습니다.<br>
 ![sprite_pos_error](https://user-images.githubusercontent.com/54612343/83328284-e5224080-a2bc-11ea-8756-8f5d4b23c105.JPG)<br>
-**이는 sprite의 위치좌표가 맵격자의 모서리에 해당하는 정수값으로 설정되어서 생기는 문제입니다.**<br>
+**이는 sprite의 위치좌표가 맵격자의 모서리에 해당하는 정수값으로 설정되어서 생기는 문제입니다.**<br><br>
 sprite[i].x와 sprite[i].y의 값에 0.5씩 추가하여 sprite의 위치가 맵격자의 중앙에 오도록 설정해보세요 :)<br>
-*마찬가지로 player의 초기 position도 개선해보시는걸 추천드립니다.*
+마찬가지로 player의 초기 position도 개선해보시는걸 추천드립니다.
 </p>
 </details>
