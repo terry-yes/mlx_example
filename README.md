@@ -1,3 +1,5 @@
+**English Ver.**
+
 ## 0. Intro
 
 On the 42 intra subject page, there are two files minilibx_opengl.tgz and minilibx_mms_20200219_beta.tgz. Let's call them **mlx** and **mlx_beta** respectively.
@@ -220,6 +222,8 @@ manual page: go to mlx_beta/man/man3 and type `man ./[manual file].3`
 ---
 
 
+
+**Korean Ver.**
 
 #### 수정사항
 
