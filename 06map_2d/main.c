@@ -5,7 +5,7 @@
 #include "../mlx/mlx.h"
 
 #define X_EVENT_KEY_PRESS		2
-#define X_EVENT_KEY_EXIT		17 //창 닫기 버튼
+#define X_EVENT_KEY_EXIT		17 //Exit program key code
 
 #define KEY_ESC			53
 
@@ -36,7 +36,7 @@ typedef struct	s_game
 	int		map[ROWS][COLS];
 }				t_game;
 
-//DDA 방법으로 선그리기
+//Draw the line by DDA algorithm
 void	draw_line(t_game *game, double x1, double y1, double x2, double y2)
 {
 	double	deltaX;

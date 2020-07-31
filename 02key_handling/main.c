@@ -4,10 +4,10 @@
 
 #define X_EVENT_KEY_PRESS		2
 #define X_EVENT_KEY_release		3
-#define X_EVENT_KEY_EXIT		17 //창 닫기 버튼 
+#define X_EVENT_KEY_EXIT		17 //exit key code
 
-//키 정보들
-//아래 이외의 키들을 README파일에 언급된 사이트에 전부 모아져 있습니다.
+//Mac key code example
+//All the key code example other than below is described on the site linked in READEME.md
 #define KEY_ESC			53
 # define KEY_Q			12
 # define KEY_W			13
@@ -17,14 +17,15 @@
 # define KEY_S			1
 # define KEY_D			2
 
- //밑에 key_press()에 넘겨줄 변수들, 인자를 하나만 받기때문에 structure로 한곳에 모아야함
- //x,y, str은 임의로 만든 변수들
+//Since key_press() can recieve only one argument, all the argument shold be gathered in one structure
+//x,y and str are meaningless variables.
 typedef struct s_param{
 	int		x;
 	int		y;
 	char	str[3];
 }				t_param;
 
+//Only param->x will be used. 
 void			param_init(t_param *param)
 {
 	param->x = 3;
@@ -36,18 +37,15 @@ void			param_init(t_param *param)
 
 int				key_press(int keycode, t_param *param)
 {
-	if (keycode == KEY_W)//W 눌렸을때 동작할 내용
-		printf("str:%s\n", param->str);
-	else if (keycode == KEY_A) //A가 눌렸을 때
-		printf("location: x=%d, y=%d\n", param->x, param->y);
-	else if (keycode == KEY_ESC) //ESC가 눌렸을 때 종료하기
+	static int a = 0;
+
+	if (keycode == KEY_W)//Action when W key pressed
+		param->x++;
+	else if (keycode == KEY_S) //Action when S key pressed
+		param->x--;
+	else if (keycode == KEY_ESC) //Quit the program when ESC key pressed
 		exit(0);
-	else
-	{
-		printf("'W' key: Print string\n");
-		printf("'A' key: Print location\n");
-		printf("'ESC' key: Exit this program\n");
-	}
+	printf("x: %d\n", param->x);
 	return (0);
 }
 
@@ -60,6 +58,13 @@ int			main(void)
 	param_init(&param);
 	mlx = mlx_init();
 	win = mlx_new_window(mlx, 500, 500, "mlx_project");
+	printf("-------------------------------\n");
+	printf("'W key': Add 1 to x.\n");
+	printf("'A key': Subtract 1 from x\n");
+	printf("'ESC key': Exit this program\n");
+	printf("'Other keys': print current x \n");
+	printf("-------------------------------\n");
+	printf("Current x = 3\n");
 	mlx_hook(win, X_EVENT_KEY_PRESS, 0, &key_press, &param);
 	mlx_loop(mlx);
 }

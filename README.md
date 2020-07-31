@@ -1,3 +1,226 @@
+## 0. Intro
+
+On the 42 intra subject page, there are two files minilibx_opengl.tgz and minilibx_mms_20200219_beta.tgz. Let's call them **mlx** and **mlx_beta** respectively.
+
+<br>
+
+## 1. Explaning my mlx example.
+
+​	There is Makefile on evey example, and you can compile and run the program by typing `make`.
+
+​	(`gcc -Lmlx -lmlx -framework OpenGL -framework AppKit` <- Compile option) 
+
+
+
+- ##### 	01first_example: Create a simple window.
+
+
+- ##### 	02key_handling: Receive events on the keyboard.
+
+
+		W: Add 1 to x.
+		A: Subtract 1 from x.
+		ESC: Quit program.
+		Other keys: Show current x value.
+
+
+- ##### 	03img_loading: Draw the loaded xpm file on the window.
+
+
+- ##### 	04img_making: Draw pixels on the window without loading image file.
+
+
+- ##### 	05img_loading_and_modifying: Modify pixels on the window after loading image file.
+
+Example 1 to 5 show basic mlx features while example 6 handles advanced features
+
+
+- #####      06map_2d: Make simple two-dimensional map. (Only Esc key and the close key on the top menu close the window. There's no other key interaction.)
+
+<br>
+
+
+## 2. Explaining major functions and their prototypes.
+
+manual page: go to mlx_beta/man/man3 and type `man ./[manual file].3`  
+
+​	e.g. `man ./mlx.3` 
+
+##### man ./mlx.3 (Manual command)
+
+---
+
+- `void	*mlx_init ();` 
+
+
+
+##### man ./mlx_new_window.3
+
+---
+
+- `void	*mlx_new_window ( void *mlx_ptr, int size_x, int size_y, char *title );`
+
+
+
+##### man ./mlx_loop.3
+
+---
+
+- `int	mlx_loop ( void *mlx_ptr );`
+  - Keeps the program running when included in the last part of the program.
+
+- `int	mlx_key_hook ( void *win_ptr, int (*funct_ptr)(), void *param );`
+
+  - Handles key inputs.
+
+  - Not used anymore because mlx_hook() function below is better in every circumstance.
+
+- `int	mlx_loop_hook ( void *mlx_ptr, int (*funct_ptr)(), void *param );`
+
+  - Keeps the program running even when there are no inputs (keyboard, mouse etc).
+  - Continuously draws the screen based on the player's current location.
+
+- `int mlx_hook(void *win_ptr, int x_event, int x_mask, int (*funct)(), void *param);`
+
+  - Major and powerful function that handles all inputs, but has no manual
+  
+  - Can receive key_press, key_release, mouse click, close button click, etc based on the `x_event` value
+
+##### man ./mlx_new_image.3
+
+---
+
+​	I recommend that you see my image example
+
+- `void	*mlx_new_image ( void *mlx_ptr, int width, int height );`
+- `char	*mlx_get_data_addr  (  void *img_ptr, int *bits_per_pixel, int *size_line, int *endian );`
+- `int	mlx_put_image_to_window ( void *mlx_ptr, void *win_ptr, void *img_ptr, int x, int y );`
+- `void*	mlx_xpm_file_to_image (  void  *mlx_ptr,  char  *filename,  int  *width,  int *height );`
+      
+
+<br>
+
+
+
+## 3. Reference Sites
+
+
+
+#### Course
+
+- **Hard**
+  
+  - Learn basic mlx features through **my examples** or `referece #1` and `reference #2`. 
+  - Understand raycasting through `reference #3` and `reference #4`
+  - Code yourself with the help of the code in `reference #5`
+  
+- **Normal**
+  
+  - Understand raycasting through `reference #3`
+  - Learn mlx features through **my examples**
+  - Code yourself with the help of the code in `reference #5` (copy paste is one of the coding methods)
+  
+- **Easy** 
+
+  - Learn mlx features through **my examples**
+  - Code yourself with the help of the code in `reference #5` (copy paste is one of the coding methods)
+
+  
+
+#### Reference
+
+1. [Collection of mlx information && ft_libgfx tutorial](https://github.com/qst0/ft_libgfx)
+
+   - Contains most of the mlx information, but no easy to understand
+
+   - Recommended to learn little by little
+
+2. [Intra MinilibX Lecture](https://elearning.intra.42.fr/notions/minilibx/subnotions)
+
+   - Basic mlx features for beginners
+   - Add up to only 20~30 lines of codes in total
+   - **My examples** and `reference #1` already contain this information 
+
+3. [Raycasting Basics with JavaScript](https://courses.pikuma.com/courses/take/raycasting/lessons/7503313-player-movement)
+
+   - Explains raycasting in a non-mathematical way
+   - Basic mathematical concepts such as `sin` and `cos` are explained
+   - However, uses non-mlx graphic libraries to draw figures (no mlx explanations)
+- Need to refer to `reference #4`  because does not explain how to handle textures
+  
+4. [Raycasting explained(Lode's Computer Graphics Tutorial)](https://lodev.org/cgtutor/raycasting.html)
+
+   - Need to understand most of this reference to understand **cub3d**
+
+   - A challenging tutorial that will made me want to give up, but I had to come back to this because the code I referred to was based on this tutorial
+
+5. [The code I referred to (42-cub3d-glagan)](https://github.com/Glagan/42-cub3d)
+
+   - Cub3d repository with the most stars
+   - Concise and well structured
+   - Based on `reference #4`
+   - But need to modify some parts (macro function usage, --save option, nonsquare maps, etc)
+
+6. [mlx image tutorials(images_example-keuhdall)](https://github.com/keuhdall/images_example)
+
+   - Recommended before handling images
+- Easy to understand
+   - But does not provide information on how to load images
+
+   
+
+#### Other references
+
+---
+
+1. key , mouse handling, etc (Both contain the same information)
+
+   - [stack overflow 42 community - several inputs (keyboard, mouse, etc)](https://stackoverflow.com/c/42network/questions/164) : Need 42 intra id
+
+   - [key handle related github](https://github.com/VBrazhnik/FdF/wiki/How-to-handle-mouse-buttons-and-key-presses%3F) - Source of this reference seems to be the one above
+2. Keyboard code numbers
+   - [Keycode (image)](https://raw.githubusercontent.com/VBrazhnik/FdF/master/images/key_codes.png)
+
+   - [Keycode(code)](https://gist.github.com/jfortin42/68a1fcbf7738a1819eb4b2eef298f4f8)
+
+<br>
+
+
+## 4. Some tips
+
+1. Two compressed files `mlx` and `mlx_beta` are given with the subject and `mlx_beta` seems to be more recent. However, I only used `mlx`
+
+2. However, `mlx` does not have a manual page so I referred to `mlx_beta`'s manual page
+
+3. `mlx`'s image files use `xpm` extensions but `mlx_beta` seem to handle `png` files as well
+
+4. `mlx_pixel_put` and `mlx_put_image_to_window` have almost the same features
+
+   - `mlx_put_image_to_window` collect image information before drawing them at once
+   - `mlx_pixel_put` seems slower because it draws dots right away
+
+   - Better to collect pixel information and draw them at once with `mlx_put_iamge_to_window`
+     - Experienced delay when used it twice
+
+3. Need to know DDA Algorithm when drawing pixels to form a line
+   - `reference #1` introduces other algorithms as well and `reference #3` does not use DDA Algorithm
+   - However, essential to understand raycasting explained in `reference #4` and `reference #5`
+
+
+
+4. Can convert image files to  `xpm` in the following site
+   https://convertio.co/kr/png-xpm/
+
+
+
+5. Need to solve norm erros derived from `reference #5`'s  macro functions (Forbidden to use macro functions that use parameters)
+
+
+
+---
+
+
+
 #### 수정사항
 
 - Lodev raycasting 번역 블로그 추가 - 20.05.30

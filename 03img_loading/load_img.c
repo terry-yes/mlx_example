@@ -1,3 +1,4 @@
+//Character '북' on the screen means 'North' in Korean.
 #include <stdio.h>
 #include "../mlx/mlx.h"
 
