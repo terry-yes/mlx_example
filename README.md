@@ -1,4 +1,5 @@
-**English Ver.**
+**English Ver.** (Korean Ver. is down below)
+
 
 ## 0. Intro
 
@@ -145,7 +146,7 @@ manual page: go to mlx_beta/man/man3 and type `man ./[manual file].3`
 
 3. [Raycasting Basics with JavaScript](https://courses.pikuma.com/courses/take/raycasting/lessons/7503313-player-movement)
 
-   - Explains raycasting in a non-mathematical way
+   - Explains raycasting in a less mathematical way
    - Basic mathematical concepts such as `sin` and `cos` are explained
    - However, uses non-mlx graphic libraries to draw figures (no mlx explanations)
 - Need to refer to `reference #4`  because does not explain how to handle textures
@@ -154,19 +155,18 @@ manual page: go to mlx_beta/man/man3 and type `man ./[manual file].3`
 
    - Need to understand most of this reference to understand **cub3d**
 
-   - A challenging tutorial that will made me want to give up, but I had to come back to this because the code I referred to was based on this tutorial
+   - A challenging tutorial that made me want to give up, but I had to come back to this because the code I referred to was based on this tutorial
 
 5. [The code I referred to (42-cub3d-glagan)](https://github.com/Glagan/42-cub3d)
 
    - Cub3d repository with the most stars
    - Concise and well structured
    - Based on `reference #4`
-   - But need to modify some parts (macro function usage, --save option, nonsquare maps, etc)
+   - But need to modify some parts (macro function usage, --save option, unable to receive nonsquare maps, etc)
 
 6. [mlx image tutorials(images_example-keuhdall)](https://github.com/keuhdall/images_example)
-
    - Recommended before handling images
-- Easy to understand
+   - Easy to understand
    - But does not provide information on how to load images
 
    
@@ -183,7 +183,7 @@ manual page: go to mlx_beta/man/man3 and type `man ./[manual file].3`
 2. Keyboard code numbers
    - [Keycode (image)](https://raw.githubusercontent.com/VBrazhnik/FdF/master/images/key_codes.png)
 
-   - [Keycode(code)](https://gist.github.com/jfortin42/68a1fcbf7738a1819eb4b2eef298f4f8)
+   - [Keycode (code)](https://gist.github.com/jfortin42/68a1fcbf7738a1819eb4b2eef298f4f8)
 
 <br>
 
