@@ -382,7 +382,9 @@ mlx_beta/man/man3폴더 들어가셔서 강조된 제목으로 명령어 치시�
 
 4. [Raycasting explained(Lode's Computer Graphics Tutorial)](https://lodev.org/cgtutor/raycasting.html)
 
-   - [위 사이트를 번역한 블로그](https://blog.naver.com/aoikazto/221433793310) -- 42 sebaek님 제보
+   - [위 사이트의 번역 깃헙 (365kim)](https://github.com/365kim/raycasting_tutorial) 
+     - 기존에도 윗글을 번역한 블로그가 있었는데 그 번역보다 훨씬 자연스럽고 읽기 쉽게 번역되어 있습니다.
+     - 또한 md파일로 원문보다 훨씬 읽기 깔끔하게 정리되어 있어서 추천드립니다!!
 
    cub3d를 이해하려면 4번을 거의 전부 이해해야합니다. 
 
