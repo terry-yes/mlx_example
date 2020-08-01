@@ -1,4 +1,4 @@
-**English Ver.** (Korean Ver. is down below)
+**English Ver.** (Korean Ver. is down below, 한국어 버전은 밑에 있습니다.)
 
 
 ## 0. Intro
