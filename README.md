@@ -260,8 +260,11 @@ manual page: go to mlx_beta/man/man3 and type `man ./[manual file].3`
 - ##### 	02key_handling: 키를 입력받고 동작을 수행합니다. 
 
 
-		W, A: 미리 입력된 메세지 출력
-		ESC: 프로그램 종료
+		W: x 변수에 1을 더함
+		A: x 변수에서 1을 뺌
+		ESC: 프로그램 종료 
+		다른키: 현재 x값 출력
+		
 
 
 - ##### 	03img_loading: xpm파일을 불러와서 화면에 그려 창에 띄웁니다.
