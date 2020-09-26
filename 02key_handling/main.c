@@ -60,7 +60,7 @@ int			main(void)
 	win = mlx_new_window(mlx, 500, 500, "mlx_project");
 	printf("-------------------------------\n");
 	printf("'W key': Add 1 to x.\n");
-	printf("'A key': Subtract 1 from x\n");
+	printf("'S key': Subtract 1 from x\n");
 	printf("'ESC key': Exit this program\n");
 	printf("'Other keys': print current x \n");
 	printf("-------------------------------\n");
