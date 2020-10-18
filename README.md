@@ -229,6 +229,8 @@ manual page: go to mlx_beta/man/man3 and type `man ./[manual file].3`
 
 - Lodev raycasting 번역 블로그 추가 - 20.05.30
 - 06map_2d 예제 추가 - 20.05.30
+- 오타 수정 (ykoh님 제보) - 20.10.18
+- Iwoo님 맵 테스터 추가 - 20.10.18
 
 
 
@@ -411,7 +413,9 @@ mlx_beta/man/man3폴더 들어가셔서 강조된 제목으로 명령어 치시�
    
    다만 이미지를 만드는법은 있지만 로딩하는 법이 없었던 것으로 기억합니다.
 
+7. [Cub3D Map Tester(42 Cadet Iwoo님께서 제작)](https://github.com/humblEgo/cub3D_map_tester)
 
+   유효한 맵인지 검사해주는 프로그램이라고 합니다!
 
 #### 기타 참고 사이트
 
@@ -466,7 +470,8 @@ mlx_beta/man/man3폴더 들어가셔서 강조된 제목으로 명령어 치시�
 
 
 
-6. sprite가 벽과 합쳐지는 오류발생시 팁입니다. <details><summary>충분히 고민하셨으면 참고해보세요.</summary><p> [Raycasting explained(Lode's Computer Graphics Tutorial)](https://lodev.org/cgtutor/raycasting.html)를 참고하여 성실히 코드를 작성하셨나요? :) <br> 이 경우! 맵 격자가 아래와 같을 때<br>
+6. sprite가 벽과 합쳐지는 오류발생시 팁입니다.(42 Iwoo님 제보)
+<details><summary>충분히 고민하셨으면 참고해보세요.</summary><p> [Raycasting explained(Lode's Computer Graphics Tutorial)](https://lodev.org/cgtutor/raycasting.html)를 참고하여 성실히 코드를 작성하셨나요? :) <br> 이 경우! 맵 격자가 아래와 같을 때<br>
 11111<br>
 11211<br>
 10N01<br>
