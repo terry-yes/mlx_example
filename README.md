@@ -22,7 +22,7 @@ On the 42 intra subject page, there are two files minilibx_opengl.tgz and minili
 
 
 		W: Add 1 to x.
-		A: Subtract 1 from x.
+		S: Subtract 1 from x.
 		ESC: Quit program.
 		Other keys: Show current x value.
 
@@ -261,7 +261,7 @@ manual page: go to mlx_beta/man/man3 and type `man ./[manual file].3`
 
 
 		W: x 변수에 1을 더함
-		A: x 변수에서 1을 뺌
+		S: x 변수에서 1을 뺌
 		ESC: 프로그램 종료 
 		다른키: 현재 x값 출력
 		
